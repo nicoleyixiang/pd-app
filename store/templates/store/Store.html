@@ -1,0 +1,31 @@
+{% extends 'store/main.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %" } />
+
+{% block content %}
+<div class="row">
+    {% for category in categories %}
+    <div class="col-lg-6">
+        <!-- Display the image of the category -->
+        <img class="thumbnail" src="{{category.imageURL}}">
+        <div class="box-element product">
+            <!-- 
+                An HTML form that will direct the visitor to 
+                the category page when the button is clicked.
+            -->
+            <form action="{% url 'category' %}" method="post" id="category-name">
+                <!-- CSRF token -->
+                {% csrf_token %}
+                <!-- 
+                    A button that displays the name of the category.
+                    When the button is clicked by a visitor of the website,
+                    the program will pass the category name back to the server.  
+                -->
+                <button type="submit" name="category" value={{category.name}}
+                    class="btn btn-outline-secondary">{{category.name}}</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box-element">
+            <div class="cart-row">
+                <div class="col-lg">
+                    <br>
+                    <!-- Takes the user back to the store page -->
+                    <a href="{% url 'store' %}">
+                        <!-- Removes the product frmo the calculator when the back button is pressed -->
+                        <button data-product={{product.id}} data-action="remove"
+                            class="btn btn-outline-secondary add-btn update-cart">Back</button>
+                    </a>
+                    <!-- Displays the product's information -->
+                    <h1>{{product.name}}</h1>
+                    <p>Cost: ${{product.price}}</p>
+                    <p>Cost per unit: ${{product.get_unit_cost}}</p>
+                    <p>Description: {{product.description}}</p>
+                </div>
+                <!-- Displays the product image  -->
+                <div class="col-lg">
+                    <img class="calculator-image" src="{{product.imageURL}}">
+                </div>
+            </div>
+            <div class="cart-row">
+                <br>
+                <div class="col-lg">
+                    <div style="flex:1">Input relevant quantities here for the calculation:</div>
+                    <br>
+                    <!-- Checks for error messages and displays them if there are any -->
+                    {% if messages %}
+                    <p class="messages">
+                        {% for message in messages %}
+                    <p class="{{ message.tags }}">{{ message }}</p>
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    <!-- Sets up the form for user to input the calculation values -->
+                    <form method="post">
+                        {% csrf_token %}
+                        <table>
+                            {{ form.as_table }}
+                        </table>
+                        <br>
+                        <!-- Submit button for the form -->
+                        <input type="submit" class="btn btn-outline-secondary add-btn">
+                    </form>
+                </div>
+                <!-- Displays the final price after the calculation is completed -->
+                <div class="col-lg">
+                    <div style="flex:1"><strong>Your cost is:</strong></div>
+                    <div style="flex:4">
+                        <h1>${{price}}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

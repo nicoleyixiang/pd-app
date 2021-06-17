@@ -1,0 +1,171 @@
+/* Citation reference: https://github.com/divanov11/ecom_steps/blob/master/prt6_stp4_main.css */
+
+body{
+	background-color: hsl(0, 0%, 98%);
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 30%);
+}
+
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+	margin: auto;
+}
+
+.left, .right {
+	height: 50%;
+	width: 50%;
+	position: fixed;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+.left {
+	left: 0;
+	background-color: rgb(36, 0, 95);
+}
+	  
+.right {
+	right: 0;
+	background-color: rgb(56, 1, 44);
+}
+
+.column {
+	float: left;
+	width: 50%;
+}
+
+.thumbnail{
+	width: 100%;
+	height: 200px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+}
+
+.product{
+	border-radius: 0 0 4px 4px;
+}
+
+.bg-dark{
+	background-color: #5c0f0f!important;
+}
+
+#cart-icon{
+	width:25px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+#cart-total{
+	display: block;
+	text-align: center;
+	color:#fff;
+	background-color: red;
+	width: 20px;
+	height: 25px;
+	border-radius: 50%;
+	font-size: 14px;
+}
+
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
+	margin-top: 10px;
+}
+
+.btn{
+	border-radius: 0;
+}
+
+.row-image{
+	width: 100px;
+}
+
+.calculator-image{
+	display: block;
+	width: 400px;
+	margin-left:inherit;
+	margin-right:inherit;
+	text-align: center;
+}
+
+.calculator-description{
+	font-weight: 300;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%
+}
+
+.c-error .c-validation{
+	background: #c51244 !important;
+	padding: 10px !important;
+	border-radius: 0 !important;
+	position: relative; 
+	display: inline-block !important;
+	box-shadow: 1px 1px 1px #aaaaaa;
+	margin-top: 10px;
+  }
+
+.c-validation:before{
+  content: '';  
+  width: 0;  
+  height: 0;  
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #c51244;
+  position: absolute;  
+  top: -10px; 
+}
+
+.form-field{
+	width:250px;
+	display: inline-block;
+	padding: 5px;
+}
+
+.cart-row{
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+.hidden{
+	display: none!important;
+}
+
+.vertical-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}	
+
+.main{
+	margin-left:160px;
+	padding: 0px 10px;
+}

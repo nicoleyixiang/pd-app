@@ -1,0 +1,46 @@
+{% extends 'store/main.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %" } />
+
+{% block content %}
+<a class="btn btn-outline-dark" href="{% url 'store' %}">&#x2190; Back</a>
+<hr>
+<h1>{{title}}</h1>
+<hr>
+<div class="row">
+    <!-- 
+        Iterating through each Product in the 
+        collection of Products being passed through 
+    -->
+    {% for product in products %}
+    <div class="col-lg-4">
+        <!-- Displaying the image of the Product -->
+        <img class="thumbnail" src="{{product.imageURL}}">
+        <div class="box-element product">
+            <h6>
+                <!-- Displaying the name of the Product -->
+                <strong>{{product.name}}</strong>
+            </h6>
+            <!-- 
+                An HTML form that will direct the visitor 
+                to the calculator page once they select the 
+                product they wish to calculate for (using 
+                the button)
+             -->
+            <form action="{% url 'calculator' %}" method="post" id="category-name">
+                <!-- CSRF token -->
+                {% csrf_token %}
+                <!-- 
+                    When the following button is clicked, the product ID
+                    is passed through as data to calculator.js.  
+                 -->
+                <button class="btn btn-outline-secondary add-btn update-cart" data-product="{{product.id}}"
+                    data-action="add">
+                    Calculate!
+                </button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
