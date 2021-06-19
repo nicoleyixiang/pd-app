@@ -10,7 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab89feb8-48d6-48e7-9072-9a6dbbea2985" name="Default Changelist" comment="" />
+    <list default="true" id="ab89feb8-48d6-48e7-9072-9a6dbbea2985" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -42,5 +45,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="312" y="80" key="SettingsEditor" timestamp="1623939039299">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="312" y="80" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1623939039299" />
+    <state x="411" y="181" key="Vcs.Push.Dialog.v2" timestamp="1623938898061">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="411" y="181" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1623938898061" />
+    <state x="476" y="203" width="670" height="676" key="search.everywhere.popup" timestamp="1623938896578">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="476" y="203" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1623938896578" />
   </component>
 </project>
